@@ -39,10 +39,28 @@ function chiamataDischi() {
 
       console.log(data);
 
+      accaBi();
+
 
     },
     error: function(errori) {
       console.log('errore');
     }
   });
+}
+function accaBi(){
+
+  var template = $ ('#template').html();
+  var compiled = Handlebars.compile(template);
+  var target = $("cd");
+
+  for (var i = 0; i < cd.length; i++) {
+    var cd = cd[i];
+
+    var cdHTML= compiled(cd);
+    target.append(cdHTML);
+  }
+
+
+
 }

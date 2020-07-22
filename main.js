@@ -41,7 +41,7 @@ function chiamataDischi() {
 
       accaBi(value);
 
-      console.log(accaBi);
+      // console.log(accaBi);
 
 
     },
@@ -55,7 +55,9 @@ function accaBi(value){
 
   var template = $ ('#template').html();
   var compiled = Handlebars.compile(template);
-  var target = $(".cd");
+  var target = $(".cd ");
+
+  console.log(target);
 
   for (var i = 0; i < value.length; i++) {
     var cd = value[i];

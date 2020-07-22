@@ -55,7 +55,7 @@ function accaBi(value){
 
   var template = $ ('#template').html();
   var compiled = Handlebars.compile(template);
-  var target = $(".cd ");
+  var target = $(".cds-container ");
 
   console.log(target);
 

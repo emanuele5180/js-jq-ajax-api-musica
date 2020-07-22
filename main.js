@@ -39,7 +39,7 @@ function chiamataDischi() {
 
       console.log(data);
 
-      accaBi();
+      accaBi(value);
 
 
     },
@@ -48,14 +48,15 @@ function chiamataDischi() {
     }
   });
 }
-function accaBi(){
+function accaBi(value){
+  console.log(value);
 
   var template = $ ('#template').html();
   var compiled = Handlebars.compile(template);
   var target = $("cd");
 
-  for (var i = 0; i < cd.length; i++) {
-    var cd = cd[i];
+  for (var i = 0; i < value.length; i++) {
+    var cd = value[i];
 
     var cdHTML= compiled(cd);
     target.append(cdHTML);
